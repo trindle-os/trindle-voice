@@ -1,0 +1,8 @@
+[Unit]
+Description=Trindle Voice speech server
+Requires=trindle-voice.socket
+After=trindle-voice.socket
+
+[Service]
+ExecStart=/usr/bin/trindle-voice serve --dir /usr/share/trindle-voice
+NoNewPrivileges=yes

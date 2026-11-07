@@ -1,0 +1,18 @@
+Source: trindle-voice
+Section: sound
+Priority: optional
+Build-Depends: cargo:native, rustc:native (>= 1.91)
+Maintainer: Trindle <voice@trindle.org>
+Standards-Version: 4.7.0
+Homepage: https://trindle.buildmorphic.com
+Rules-Requires-Root: no
+
+Package: trindle-voice
+Architecture: any
+Depends: ${shlibs:Depends}, pipewire-bin
+Description: on-device text to speech and speech server
+ Reads text aloud with the Supertonic 2 voices, in pure Rust. The speech server
+ starts on the first connection to its socket and leaves when idle.
+ The speech models come from Hugging Face (Supertone/supertonic-2, revision
+ 75e6727618a02f323c720cba9478152d4bc16ca4) when the image is built. The voice files (about 253 MB) are installed in /usr/share/trindle-voice and
+ stay under the BigScience Open RAIL-M License, whose use restrictions pass on.

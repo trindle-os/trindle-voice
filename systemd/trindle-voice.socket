@@ -1,0 +1,10 @@
+[Unit]
+Description=Trindle Voice speech door
+
+[Socket]
+ListenStream=%t/trindle-voice/say.sock
+SocketMode=0600
+DirectoryMode=0700
+
+[Install]
+WantedBy=sockets.target

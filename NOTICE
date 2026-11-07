@@ -1,0 +1,45 @@
+Trindle Voice is a maintained fork of Supertonic, the on-device text to speech
+by Supertone Inc. Upstream is archived and no longer developed:
+https://github.com/supertone-oss-archive/supertonic
+Forked from commit 1e9799e964ea4c0dad7cde993b65c3c813a7b373 (9 September 2026).
+
+Supertonic keeps its name and its copyright. The original code is under the MIT
+licence below, unchanged. Trindle's changes, and Trindle Voice as a whole, are
+under the GNU General Public License, version 3 or later (see LICENSE); the MIT
+text and copyright notice stay with the code that came from Supertonic.
+
+----------------------------------------------------------------------------
+
+MIT License
+
+Copyright (c) 2025 Supertone Inc.
+
+Permission is hereby granted, free of charge, to any person obtaining a copy
+of this software and associated documentation files (the "Software"), to deal
+in the Software without restriction, including without limitation the rights
+to use, copy, modify, merge, publish, distribute, sublicense, and/or sell
+copies of the Software, and to permit persons to whom the Software is
+furnished to do so, subject to the following conditions:
+
+The above copyright notice and this permission notice shall be included in all
+copies or substantial portions of the Software.
+
+THE SOFTWARE IS PROVIDED "AS IS", WITHOUT WARRANTY OF ANY KIND, EXPRESS OR
+IMPLIED, INCLUDING BUT NOT LIMITED TO THE WARRANTIES OF MERCHANTABILITY,
+FITNESS FOR A PARTICULAR PURPOSE AND NONINFRINGEMENT. IN NO EVENT SHALL THE
+AUTHORS OR COPYRIGHT HOLDERS BE LIABLE FOR ANY CLAIM, DAMAGES OR OTHER
+LIABILITY, WHETHER IN AN ACTION OF CONTRACT, TORT OR OTHERWISE, ARISING FROM,
+OUT OF OR IN CONNECTION WITH THE SOFTWARE OR THE USE OR OTHER DEALINGS IN THE
+SOFTWARE.
+
+----------------------------------------------------------------------------
+
+The voice files are not part of this repository and are not covered by the
+licences above. The Supertonic 2 model and voices are by Supertone Inc. under
+the BigScience Open RAIL-M License (full text in licences/supertonic-OpenRAIL-M.txt).
+You may copy and use them, but the licence's use restrictions travel with them
+to everyone who uses the model (see Attachment A in that file). The models come from Hugging Face,
+https://huggingface.co/Supertone/supertonic-2, at the pinned revision 75e6727618a02f323c720cba9478152d4bc16ca4, and are checked against SHA256SUMS.
+
+Supertonic's models were trained with PyTorch (BSD 3-Clause), which is not
+redistributed here.

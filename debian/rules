@@ -1,0 +1,38 @@
+#!/usr/bin/make -f
+# Plain rules, no debhelper: builds the program and stages the units; the voice files are added to /usr/share/trindle-voice by the image build and checked with SHA256SUMS.
+pkg = debian/trindle-voice
+doc = $(pkg)/usr/share/doc/trindle-voice
+units = $(pkg)/usr/lib/systemd/user
+
+build:
+	cargo build --release --locked
+
+build-arch: build
+build-indep:
+
+binary-arch: build
+	rm -rf $(pkg)
+	install -D target/release/trindle-voice $(pkg)/usr/bin/trindle-voice
+	install -D -m 644 systemd/trindle-voice.socket $(units)/trindle-voice.socket
+	install -D -m 644 systemd/trindle-voice.service $(units)/trindle-voice.service
+	install -d $(units)/sockets.target.wants
+	ln -s ../trindle-voice.socket $(units)/sockets.target.wants/trindle-voice.socket
+	install -D -m 644 NOTICE $(doc)/NOTICE
+	install -D -m 644 SHA256SUMS $(doc)/SHA256SUMS
+	install -D -m 644 debian/changelog $(doc)/changelog
+	gzip -9n $(doc)/changelog
+	cat debian/copyright licences/supertonic-OpenRAIL-M.txt > $(doc)/copyright
+	chmod 644 $(doc)/copyright
+	strip --strip-unneeded $(pkg)/usr/bin/trindle-voice
+	install -d $(pkg)/DEBIAN
+	dpkg-shlibdeps -e$(pkg)/usr/bin/trindle-voice
+	dpkg-gencontrol -ptrindle-voice -P$(pkg)
+	dpkg-deb --root-owner-group --build $(pkg) ..
+
+binary: binary-arch
+binary-indep:
+
+clean:
+	rm -rf $(pkg) debian/substvars debian/files
+
+.PHONY: build build-arch build-indep binary binary-arch binary-indep clean
