@@ -2,7 +2,7 @@
 
 <p align="center">
 
-[![version](https://img.shields.io/badge/version-0.1.0-2b2b2b?style=flat-square)](CHANGELOG.md)
+[![version](https://img.shields.io/badge/version-0.2.0-2b2b2b?style=flat-square)](CHANGELOG.md)
 [![licence](https://img.shields.io/badge/licence-GPL--3.0--or--later-2b2b2b?style=flat-square)](LICENSE)
 [![language](https://img.shields.io/badge/pure-Rust-2b2b2b?style=flat-square)](Cargo.toml)
 [![runtime](https://img.shields.io/badge/C%2B%2B_runtime-none-2b2b2b?style=flat-square)](Cargo.toml)
@@ -121,7 +121,6 @@ restrictions (Attachment A in that file) apply to anyone who uses them.
 ## More
 
 [docs/HELP.md](docs/HELP.md) (plain-words help), [CHANGELOG.md](CHANGELOG.md), [SECURITY.md](SECURITY.md), [CONTRIBUTING.md](CONTRIBUTING.md). Report bugs through the Trindle community at https://trindle.buildmorphic.com.
-
 Comments are stripped from the published code to keep it lean.
 
 ## Disclaimer

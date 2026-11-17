@@ -1,6 +1,6 @@
 # Changelog
 
-## Unreleased
+## 0.2.0 - 16 November 2026
 
 - The speech server moved here from Talk: a priority queue with markers, the speech door a screen reader connects to, the phrase store, speed change, the `pw-play` player and sound cues, as the `speech` module. `trindle-voice serve --dir DIR` runs it and `trindle-voice render-phrases` builds a phrase store. Written-out numbers (`spoken`) and `text::lead_pieces`, which cuts text so the first sound comes early, came with it.
 - The code is now under the GNU General Public License, version 3 or later. The original Supertonic MIT notice is kept in NOTICE.

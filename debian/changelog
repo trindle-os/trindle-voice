@@ -1,3 +1,9 @@
+trindle-voice (0.2.0) UNRELEASED; urgency=medium
+
+  * The speech server, socket activation and rustix 1.1.6.
+
+ -- Trindle <voice@trindle.org>  Mon, 16 Nov 2026 19:00:00 +0000
+
 trindle-voice (0.1.0) UNRELEASED; urgency=medium
 
   * First package: the program, the user socket and service units.
